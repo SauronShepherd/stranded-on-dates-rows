@@ -11,7 +11,6 @@ object StrandedOnDatesRowsTest {
     Logger.getLogger("akka").setLevel(Level.ERROR)
 
     // Create a Spark session
-    val codegenPath = this.getClass.getProtectionDomain.getCodeSource.getLocation.getPath
     val spark = SparkSession.builder()
       .master("local[*]")
       .getOrCreate()
