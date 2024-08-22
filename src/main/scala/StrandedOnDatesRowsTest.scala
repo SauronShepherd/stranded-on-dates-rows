@@ -32,8 +32,6 @@ object StrandedOnDatesRowsTest {
         "TO_DATE WITH EMPTY VALUES",
         numRows,
         df.withColumn("date_column", to_date($"date_str_column", "yyyy-MM-dd"))
-          .withColumn("date_column2", to_date($"date_str_column", "yyyy-MM-dd"))
-          .withColumn("date_column3", to_date($"date_str_column", "yyyy-MM-dd"))
       )
 
       // Count nulls after applying to_date with null values
